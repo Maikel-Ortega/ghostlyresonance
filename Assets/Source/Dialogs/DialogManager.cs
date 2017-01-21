@@ -15,6 +15,19 @@ public class DialogManager : MonoBehaviour
 
 	public int currentIndex = 0;
 
+	void Awake()
+	{
+		string lang = PlayerPrefs.GetString("language");
+		if(lang == "english")
+		{
+			english = true;
+		}
+		else
+		{
+			english = false;
+		}
+	}
+
 	public void ShowDialog(string key, DialogInteractuable interactuable)
 	{		
 		Debug.Log("Showing dialog");

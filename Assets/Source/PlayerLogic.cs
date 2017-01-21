@@ -153,7 +153,7 @@ public class PlayerLogic : MonoBehaviour
 		if(freqCD == 0f && (up || down) && !(up && down))
 		{
 			int amount = Mathf.CeilToInt( up ? 1 : -1);
-			freqManager.frequency += amount * Mathf.CeilToInt(holdFreqMult);
+			freqManager.frequency += amount * Mathf.FloorToInt(holdFreqMult);
 			freqCD = freqMaxCD;
 		}
 
@@ -164,7 +164,6 @@ public class PlayerLogic : MonoBehaviour
 	{
 		if(Input.GetButtonDown(mInputButtonPulse) && pulseCD == 0)
 		{
-			Camera.main.transform.DOShakePosition(0.5f,Vector3.up * 0.5f);
 			pulseGenerator.SendPulse(pMaxRadius, pCurve, pMaxSeconds, freqManager.frequency);
 		}
 	}

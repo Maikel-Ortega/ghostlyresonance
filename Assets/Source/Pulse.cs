@@ -9,6 +9,7 @@ public class Pulse : MonoBehaviour
 	public float maxSeconds;
 	public float mFrequency;
 	public float curRad;
+	public SpriteRenderer spr;
 	Coroutine pulseCorr;
 
 	public void SendPulse(float radius, AnimationCurve curve, float seconds, float frequency)
@@ -32,6 +33,12 @@ public class Pulse : MonoBehaviour
 			float normalizedValue = counter/maxSeconds;
 			float evaluatedValue = this.mCurve.Evaluate(normalizedValue);
 			float curRad = evaluatedValue * maxRadius;
+
+			if(normalizedValue > 0.75f)
+			{
+				float alpha = Mathf.Lerp(1,0, (normalizedValue-0.75f)/0.25f);
+			}
+
 			ChangeRadius(curRad);
 			counter += Time.deltaTime;
 			yield return null;
@@ -47,7 +54,7 @@ public class Pulse : MonoBehaviour
 		Vector3 vp = Camera.main.WorldToViewportPoint(this.transform.position);
 
 		Shader.SetGlobalVector("_ShockwavePos", new Vector4(vp.x,vp.y,1f,1f));
-		Shader.SetGlobalFloat("_Radius", rad/40f);
+		Shader.SetGlobalFloat("_Radius", rad/35f);
 
 		if(rad == 0)
 		{
