@@ -38,6 +38,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Placeholder
+    uniqueID: 1101065829
+    locked: 0
+  - name: Background
+    uniqueID: 2256394377
+    locked: 0
+  - name: HotelBack
+    uniqueID: 2431531697
+    locked: 0
+  - name: ObjectBack
+    uniqueID: 2608664229
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: PJs
+    uniqueID: 2530824431
+    locked: 0
+  - name: ObjectFront
+    uniqueID: 2522256059
+    locked: 0
+  - name: HotelFront
+    uniqueID: 2546435697
     locked: 0
