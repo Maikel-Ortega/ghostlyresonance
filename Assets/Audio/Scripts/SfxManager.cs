@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class SfxManager : MonoBehaviour {
 
-	AudioSource [] listSfx;
+	public AudioSource [] footsteps;
 	AudioSource sound;
+	public AudioSource chimea,chimeb,chimec,chimed, door, cristal, wall;
 
 	void PlayAnySound(){
 	
@@ -20,15 +21,84 @@ public class SfxManager : MonoBehaviour {
 	
 	}
 
-	void PlayAnyRandomSound(){
+	public void PlayGlass(){
+
+		if (cristal	 != null) 
+		{
+			cristal.Play ();
+		} 
+		else 
+		{
+			Debug.Log(cristal.name + " is null");
+		}
+
+	}
+
+	public void PlayWall(){
+
+		if (wall!= null) 
+		{
+			wall.Play ();
+		} 
+		else 
+		{
+			Debug.Log(wall.name + " is null");
+		}
+
+	}
+
+
+
+	public void PlayDoor(){
+
+		if (door != null) 
+		{
+			door.Play ();
+		} 
+		else 
+		{
+			Debug.Log(door.name + " is null");
+		}
+
+	}
+
+
+
+
+	public void PlayChime(int id){
+
+	
+		switch(id){
+
+		case 0: 
+			chimea.Play ();
+			break;
+		case 1: 
+			chimeb.Play ();
+			break;
+		case 2: 
+			chimec.Play ();
+			break;
+		case 3: 
+			chimed.Play ();
+			break;
+
+		}
+
+
+	}
+
+
+
+	public void PlayFootsteps(){
 	
 		int random;
 
-		if(listSfx!=null){
+		if(footsteps!=null){
 			
-		random = Random.Range (0, listSfx.Length);
+		random = Random.Range (0, footsteps.Length);
 
-			listSfx [random].Play ();
+			footsteps [random].Play ();
 		}
 		else
 		{
@@ -36,7 +106,7 @@ public class SfxManager : MonoBehaviour {
 		}
 	}
 
-	void RandomPitch(){
+	public void RandomPitch(){
 
 		float randompn,randomvalue;
 
