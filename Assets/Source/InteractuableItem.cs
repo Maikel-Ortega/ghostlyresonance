@@ -13,7 +13,11 @@ public class InteractuableItem : MonoBehaviour
 	{
 		if(canInteract)
 		{
-			interacting = !interacting;
+			interacting = true;
+			if(OnInteract != null)
+			{
+				OnInteract(this);
+			}
 		}
 	}
 }

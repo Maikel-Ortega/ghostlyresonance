@@ -18,6 +18,7 @@ public class PlayerLogic : MonoBehaviour
 
 	[Header("Interactions")]
 	public bool interacting;
+	public InteractuableItem interactuableOnArea;
 
 	[Header("FrequencyManager")]
 	public FrequencyManager freqManager;
@@ -32,6 +33,7 @@ public class PlayerLogic : MonoBehaviour
 	public AnimationCurve pCurve;
 	public float pMaxSeconds;
 	public float pFrequency;
+
 
 	private float pulseCD = 0f;
 
@@ -49,6 +51,9 @@ public class PlayerLogic : MonoBehaviour
 		{
 			velocity.x = 0;
 		}
+
+		CheckInteractInput();
+
 		velocity = Vector2.ClampMagnitude(velocity, maxVelocity);
 		UpdateCounters();
 	}
@@ -78,6 +83,39 @@ public class PlayerLogic : MonoBehaviour
 		{
 			freqCD = Mathf.Clamp( freqCD - Time.deltaTime, 0f, freqMaxCD);
 		}
+	}
+
+	void CheckInteractInput()
+	{
+		if(Input.GetButtonDown(this.mInputButtonInteract))
+		{
+			Debug.Log("InteractButton!");
+			if(!interacting)
+			{
+				List<Collider2D> col = new List<Collider2D> (Physics2D.OverlapBoxAll(transform.position, Vector2.one, 0f));
+				if(col != null)
+				{
+					foreach (var item in col) 
+					{
+						InteractuableItem i = item.GetComponent<InteractuableItem>();	
+						if(i!= null && i.canInteract)
+						{
+							interactuableOnArea = i;
+							Debug.Log("Found interactable: "+i.gameObject.ToString());
+						}
+					}
+					if(interactuableOnArea != null)
+					{
+						interactuableOnArea.Interact();
+						interacting = true;
+					}
+				}
+			}
+			else
+			{
+				interactuableOnArea.Interact();
+			}
+		}	
 	}
 
 	void CheckJumpInput()
@@ -158,6 +196,13 @@ public class PlayerLogic : MonoBehaviour
 		{
 			velocity.y = 0;
 		}
+	}
+
+	public void FinishedDialog()
+	{
+		Debug.Log("Finished DIalog: PLayer");
+		this.interacting = false;
+		this.interactuableOnArea = null;
 	}
 
 }
