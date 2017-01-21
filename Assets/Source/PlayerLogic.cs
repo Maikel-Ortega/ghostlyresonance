@@ -9,6 +9,9 @@ public class PlayerLogic : MonoBehaviour
 	public float speed=5f;
 	public Vector2 velocity;
 	public float maxVelocity = 5f;
+	public Transform graphicPivot;
+	public Animator mAnimator;
+	public int dir = 1;
 
 	[Header("Input")]
 	public string mInputButtonPulse = "Fire1";
@@ -176,6 +179,16 @@ public class PlayerLogic : MonoBehaviour
 	{
 		Vector2 m = new Vector2(Input.GetAxis("Horizontal"),0);
 		velocity+= m*Time.deltaTime*speed;
+		if(m.x > 0)
+		{
+			dir = 1;
+			graphicPivot.localScale = new Vector3(-1,1,1);
+		}
+		else if (m.x < 0)
+		{
+			dir = -1;
+			graphicPivot.localScale = new Vector3(1,1,1);
+		}
 		if(m.x == 0 && mMovement.grounded)
 		{
 			velocity *= 0.4f*Time.deltaTime;
