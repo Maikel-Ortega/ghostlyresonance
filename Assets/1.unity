@@ -1044,6 +1044,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0754c8cb54707c04097f9db554bb29b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetFrequency: 30
+  offset: 0
 --- !u!61 &1484490108
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1158,6 +1160,8 @@ MonoBehaviour:
   mInputButtonPulse: Fire1
   mInputButtonFreqUp: FreqUp
   mInputButtonFreqDown: FreqDown
+  mInputButtonInteract: Fire2
+  interacting: 0
   freqManager: {fileID: 609410529}
   freqMaxCD: 0.25
   holdFreqMult: 1
@@ -1239,7 +1243,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1585053646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.31, y: 7.13, z: 0}
+  m_LocalPosition: {x: 0.58, y: 0.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 960478532}
