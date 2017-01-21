@@ -600,7 +600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84604f4e502bcc645ad289187c4fba44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxFreq: 150
+  maxFreq: 160
   minFreq: 30
   waveRenderer: {fileID: 154892691}
 --- !u!1 &714301820
@@ -1233,8 +1233,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0754c8cb54707c04097f9db554bb29b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetFrequency: 50
-  freqAcceptableOffset: 10
+  targetFrequency: 120
+  freqAcceptableOffset: 5
   vibrate: 1
   vibrationTransform: {fileID: 981036493}
   vibrationDir: {x: 1, y: 0, z: 0}
