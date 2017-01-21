@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerLogic : MonoBehaviour 
 {
@@ -125,6 +126,7 @@ public class PlayerLogic : MonoBehaviour
 	{
 		if(this.mMovement.grounded)
 		{
+			
 		}
 	}
 
@@ -162,6 +164,7 @@ public class PlayerLogic : MonoBehaviour
 	{
 		if(Input.GetButtonDown(mInputButtonPulse) && pulseCD == 0)
 		{
+			Camera.main.transform.DOShakePosition(0.5f,Vector3.up * 0.5f);
 			pulseGenerator.SendPulse(pMaxRadius, pCurve, pMaxSeconds, freqManager.frequency);
 		}
 	}

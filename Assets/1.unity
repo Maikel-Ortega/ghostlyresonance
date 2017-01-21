@@ -1137,6 +1137,10 @@ Prefab:
       propertyPath: freqManager
       value: 
       objectReference: {fileID: 609410529}
+    - target: {fileID: 1192194035237642, guid: dd7ee844fd900e64c887633202e91081, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd7ee844fd900e64c887633202e91081, type: 2}
   m_IsPrefabParent: 0
