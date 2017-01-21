@@ -15,27 +15,32 @@ public class CameraBehaviour : UnitySingleton<CameraBehaviour>
 
 
     Transform objectFocused;
-    bool followingPlayer = true;
+    public bool followingPlayer = true;
+    private float yAxis = 0f;
 
 
-    void FixedUpdate()
+    void LateUpdate()
     {
         if (followingPlayer)
         {
-            Vector3 newTransform = new Vector3(playerTransform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
+            Vector3 newTransform = new Vector3(playerTransform.position.x, yAxis, Camera.main.transform.position.z);
             Camera.main.transform.position = newTransform;
         }
         
     }
 
-    public void FocusOnTransform(Transform _objectFocused)
+    public void FocusOnTransform(Transform _objectFocused, float _yAxis)
     {
         this.objectFocused = _objectFocused;
-        Vector3 v3NewCameraPosition = new Vector3(_objectFocused.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
+        yAxis = _yAxis;
+        Vector3 v3NewCameraPosition = new Vector3(_objectFocused.position.x, yAxis, Camera.main.transform.position.z);
         followingPlayer = false;
-        Camera.main.transform.DOMove(v3NewCameraPosition, 2f).SetEase(Ease.Linear).OnComplete(() =>
+
+        Camera.main.transform.DOMove(v3NewCameraPosition, 2f).SetEase(Ease.InOutCubic).OnComplete(() =>
         {
+            playerTransform.position = new Vector3(_objectFocused.position.x, yAxis, playerTransform.transform.position.z);
             followingPlayer = true;
+            
             OnFocusFinished(_objectFocused);
 
         });
