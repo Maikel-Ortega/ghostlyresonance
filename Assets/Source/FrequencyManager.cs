@@ -8,7 +8,7 @@ public class FrequencyManager : MonoBehaviour
 	public float minFreq = 0f;
 	public WaveRenderer waveRenderer;
 
-	private float _frequency;
+	private float _frequency= 100;
 	public float frequency 
 	{
 		get

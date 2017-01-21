@@ -68,7 +68,6 @@ public class Pulse : MonoBehaviour
 
 	void CheckCol(Collider2D col)
 	{
-		Debug.Log("!");
 		if(col.GetComponent<PulseReceiver>() != null)
 		{
 			PulseReceiver rec = col.GetComponent<PulseReceiver>();
