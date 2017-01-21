@@ -7,6 +7,7 @@ public class FrequencyManager : MonoBehaviour
 	public float maxFreq = 400f;
 	public float minFreq = 0f;
 	public WaveRenderer waveRenderer;
+    public UnityEngine.UI.Slider _sldIndicador;
 
 	private float _frequency= 100;
 	public float frequency 
@@ -17,8 +18,11 @@ public class FrequencyManager : MonoBehaviour
 		}
 		set
 		{
+
 			_frequency = Mathf.Clamp(value, minFreq, maxFreq);
-			waveRenderer.mFreq = _frequency;
+            _sldIndicador.value = (_frequency - minFreq) / (maxFreq - minFreq);
+
+            waveRenderer.mFreq = _frequency;
 		}
 	}
 }
