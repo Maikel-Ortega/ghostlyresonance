@@ -12,6 +12,7 @@ public class PulseReceiver : MonoBehaviour
 	public Vector3 vibrationDir;
 	public float cdTime = 0f;
 	public float maxCdTime = 1f;
+	public ParticleSystem pulseCircle;
 
 	public void OnPulseReceived(Pulse p)
 	{
@@ -42,15 +43,26 @@ public class PulseReceiver : MonoBehaviour
 					difference = (targetFrequency - freqAcceptableOffset) -  p.mFrequency;
 				}
 
-
+				float minSize = 0.4f;
+				float maxSize = 3f;
 				float maxStr =0.5f;
-				float str = Mathf.Lerp(maxStr, 0f, difference/maxDifference);
 
-				int vibrato = (int)Mathf.Lerp(22,12, difference/maxDifference);
+				float nValue = difference/maxDifference;
+				float str = Mathf.Lerp(maxSize, minSize,nValue);
+
+				if(float.IsNaN(str))
+				{
+					str = maxStr;
+				}
+				pulseCircle.transform.localScale = new Vector3(str,str,str);
+
+				var ma = pulseCircle.main;
+
+				ma.startColor = new Color(1,1,1,1-nValue);
+				pulseCircle.Play();
 
 				Debug.Log("Vibrating. Str: "+ str);
-				//vibrationTransform.DOShakePosition(0.7f, vibrationDir*str,25,0);
-				vibrationTransform.DOPunchPosition(str*vibrationDir, 5,100);
+				vibrationTransform.DOShakePosition(0.7f, vibrationDir*str*0.5f,15,0);
 			}
 		}
 	}
@@ -70,6 +82,12 @@ public class PulseReceiver : MonoBehaviour
 
 	protected virtual void Reaction()
 	{
-		this.transform.localScale = Vector3.one * 2;
+		
+		pulseCircle.transform.localScale = new Vector3(5f,5f,5f);
+		var ma = pulseCircle.main;
+		ma.startColor = new Color(1,1,1,1);
+		pulseCircle.Play();
+
+		vibrationTransform.DOShakePosition(1.7f, vibrationDir*1,25,0);
 	}
 }
