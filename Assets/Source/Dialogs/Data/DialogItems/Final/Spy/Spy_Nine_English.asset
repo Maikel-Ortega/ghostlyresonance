@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e3b31661615f642a28cd73a261f842, type: 3}
+  m_Name: Spy_Nine_English
+  m_EditorClassIdentifier: 
+  portrait: {fileID: 0}
+  texts:
+  - The sweet young heir... Elisabetta...
+  - To think that someone that lovely could share the same genes as that O'Hara thief...
+  - I needed to learn what she knew about the bells. About the combination to find
+    that treasure in the attic.
+  - But I fell for her... What a shame. What a pitiful professional...
+  - I still only know about the first bell you need to chime...
