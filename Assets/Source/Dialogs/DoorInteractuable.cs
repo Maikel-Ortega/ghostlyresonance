@@ -47,6 +47,7 @@ public class DoorInteractuable : InteractuableItem
     {
         playerLogic.interacting = false;
         canInteract = false;
+        interacting = false;
         started = false;
         Invoke("ResetInteraction", 0.5f);
     }
