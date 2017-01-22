@@ -9,15 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15e3b31661615f642a28cd73a261f842, type: 3}
-  m_Name: Manager_Three_English
+  m_Name: Manager_Three_Spanish
   m_EditorClassIdentifier: 
   portrait: {fileID: 0}
   texts:
-  - Welcome to our humble hotel stranger.
-  - A sad story and a treasure hides between its walls.
-  - You will find several guests around the hotel...
-  - '...or what remains of them. '
-  - They all died on that terrible week, years ago...
-  - I lure them here, to find the way to the treasure...
+  - Bienvenido a nuestro humilde hotel forastero.
+  - Una triste historia, y un tesore, se esconden entre sus muros.
+  - "Encontraras a varios de mis hu\xE9spedes alrededor del hotel..."
+  - '...o lo que queda de ellos.'
+  - "Murieron todos aquella fat\xEDdica semana, hace muchos a\xF1os"
+  - "Les atraje aqu\xED, gui\xE9 sus pasos hacia mi hotel, les hice venir..."
   - '...'
-  - Words can't express how miserable I feel, even after dead.
+  - "No encuentro palabras para describir como me siento... ni despu\xE9s de muerto..."

@@ -55,7 +55,7 @@ public class HotelManager : MonoBehaviour
 
 	void Awake()
 	{
-		SetGhostsConfigByHour(HOURS.TWELVE);
+		SetGhostsConfigByHour(HOURS.THREE);
 	}
 
 	void Update()

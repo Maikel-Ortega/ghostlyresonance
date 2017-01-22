@@ -26,6 +26,8 @@ MonoBehaviour:
     dialogScriptable: {fileID: 11400000, guid: 3e5207ad235baf64d91480e4112013a3, type: 2}
   - key: Heir_Nine
     dialogScriptable: {fileID: 11400000, guid: 29af53ca831fbaa45bd0342a80bc405c, type: 2}
+  - key: Manager_Three
+    dialogScriptable: {fileID: 11400000, guid: f85072ef4526ee4449db0d22878ae17e, type: 2}
   - key: Manager_Twelve
     dialogScriptable: {fileID: 11400000, guid: 9954adc89394bfb4d8589e982d91f255, type: 2}
   spanishDialogs:
@@ -43,5 +45,7 @@ MonoBehaviour:
     dialogScriptable: {fileID: 11400000, guid: e2293686ffa63ed419285aad82729afd, type: 2}
   - key: Heir_Nine
     dialogScriptable: {fileID: 11400000, guid: 9214c0cc269f21d4fb9bad063bb1b8ad, type: 2}
+  - key: Manager_Three
+    dialogScriptable: {fileID: 11400000, guid: a30f525445a35404ba5629bba656036c, type: 2}
   - key: Manager_Twelve
     dialogScriptable: {fileID: 11400000, guid: d2d24b47360ca8148801516e721f998e, type: 2}

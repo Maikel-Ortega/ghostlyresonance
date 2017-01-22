@@ -181,6 +181,7 @@ public class PlayerLogic : MonoBehaviour
 	void CheckMovementInput()
 	{
 		Vector2 m = new Vector2(Input.GetAxis("Horizontal"),0);
+		this.mAnimator.SetFloat("speed",Mathf.Abs(m.x));
 		velocity+= m*Time.deltaTime*speed;
 		if(m.x > 0)
 		{
