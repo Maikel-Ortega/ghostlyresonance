@@ -6,6 +6,8 @@ public class CampanaReciever : PulseReceiver
 {
     public int campanaId = 0;
 	public Animator amt;
+	public delegate void CampanaDelegate(CampanaReciever c);
+	public event CampanaDelegate OnCampanaReact;
 
     SfxManager sfxManager;
 
@@ -16,7 +18,11 @@ public class CampanaReciever : PulseReceiver
     protected override void Reaction()
     {
         base.Reaction();
-		amt.SetTrigger("chime");
+		amt.Play("chime");
+		if(OnCampanaReact != null)
+		{
+			OnCampanaReact(this);
+		}
 
     //    this.enabled = false;
    //     mGraphicPivot.gameObject.SetActive(false);
