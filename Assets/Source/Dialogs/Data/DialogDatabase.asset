@@ -13,7 +13,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   englishDialogs:
   - key: TEST
-    dialogScriptable: {fileID: 11400000, guid: 68e1569d5bf014c46ad84a86ae3452e1, type: 2}
+    dialogScriptable: {fileID: 11400000, guid: 5a28718f6ebea84458d6ba4e2bc45f50, type: 2}
+  - key: TEST_RECEP_NINE
+    dialogScriptable: {fileID: 11400000, guid: ba0d3b0125192034eb20187d80d14b3a, type: 2}
+  - key: TEST_RECEP_TWELVE
+    dialogScriptable: {fileID: 11400000, guid: 6f559cf42c4d66e46a883d0532baaf57, type: 2}
+  - key: TEST_VIEJA_NINE
+    dialogScriptable: {fileID: 11400000, guid: e9c4e47655e592c4d924f3333dde86a0, type: 2}
+  - key: TEST_VIEJA_TWELVE
+    dialogScriptable: {fileID: 11400000, guid: f7138f11292d82748a2256a60dc4558a, type: 2}
   spanishDialogs:
   - key: TEST
     dialogScriptable: {fileID: 11400000, guid: 68e1569d5bf014c46ad84a86ae3452e1, type: 2}
+  - key: TEST_RECEP_NINE
+    dialogScriptable: {fileID: 11400000, guid: ba0d3b0125192034eb20187d80d14b3a, type: 2}
+  - key: TEST_RECEP_TWELVE
+    dialogScriptable: {fileID: 11400000, guid: 6f559cf42c4d66e46a883d0532baaf57, type: 2}
+  - key: TEST_VIEJA_NINE
+    dialogScriptable: {fileID: 11400000, guid: e9c4e47655e592c4d924f3333dde86a0, type: 2}
+  - key: TEST_VIEJA_TWELVE
+    dialogScriptable: {fileID: 11400000, guid: f7138f11292d82748a2256a60dc4558a, type: 2}
