@@ -183,7 +183,6 @@ public class PlayerLogic : MonoBehaviour
 		velocity+= m*Time.deltaTime*speed;
 		if(m.x > 0)
 		{
-			GameObject.FindObjectOfType<SfxManager>().PlayFootsteps();
 			dir = 1;
 			graphicPivot.localScale = new Vector3(-1,1,1);
 		}

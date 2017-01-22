@@ -6,11 +6,11 @@ using DG.Tweening;
 public class MusicManager : MonoBehaviour {
 
 	public AudioSource [] ghost;
-	public AudioSource Ambient, music1, music2,music3;
-	public AudioSource cbass,violins,pedvi;
-	public int  time = 20;
+	public AudioSource Ambient;
+	public AudioSource cbass,violins,celesta1,celesta2,celesta3,celesta4,celesta5,piano,fagot,pipe,horn,balalika;
+	public int  time = 5;
 	public float timecont=0;
-	public int instruments= 2;
+	public int instruments= 7;
 	public bool control=true;
 
 
@@ -26,6 +26,28 @@ public class MusicManager : MonoBehaviour {
 			
 	}
 
+	void GeneralPlay(AudioSource audio){
+
+		if (!audio.isPlaying) 
+		{
+			audio.volume = 0;
+			audio.Play ();
+			audio.DOFade (1f, 2f);
+
+		} 
+		else 
+		{
+			audio.DOFade (0f, 3f).OnComplete (() => {
+				audio.Stop ();
+
+			}
+			);
+
+		}
+
+
+	}
+
 
 	void MusicSystem(){
 
@@ -36,45 +58,40 @@ public class MusicManager : MonoBehaviour {
 		{
 		case 0: 
 
-			if (!violins.isPlaying) 
-			{
-			   
-				violins.Play ();
-				violins.DOFade (1f, 2f);
-			
-			} 
-			else 
-			{
-				violins.DOFade (0f, 2f).OnComplete (() => {
-					violins.Stop ();
-				}
-				);
 
-			}
-
-
+			GeneralPlay (cbass);
 			break;
 		
 		case 1: 
+			GeneralPlay (violins);
 
-			if (!pedvi.isPlaying) 
-			{
-
-				pedvi.Play ();
-				pedvi.DOFade (1f, 2f);
-
-			} 
-			else 
-			{
-
-				pedvi.DOFade (0f, 2f).OnComplete (() => {
-					pedvi.Stop ();
-				}
-				);
+		
+			break;
 
 
-			}
+		case 2: 
+			
+			GeneralPlay (celesta1);
+			break;
 
+
+		case 3: 
+
+			GeneralPlay (celesta2);
+			break;
+
+
+		case 4: 
+
+			GeneralPlay (celesta3);
+			break;
+		case 5: 
+
+			GeneralPlay (celesta4);
+			break;
+		case 6: 
+
+			GeneralPlay (celesta5);
 			break;
 	    }
 
@@ -91,7 +108,7 @@ public class MusicManager : MonoBehaviour {
 	
 		timecont += 1 *Time.deltaTime ;
 
-		if (timecont >= 5 && timecont<6 && control) {
+		if (timecont >= time && timecont<time+1 && control) {
 		
 			MusicSystem ();
 			control = false;
@@ -99,7 +116,7 @@ public class MusicManager : MonoBehaviour {
 		} 
 
 
-		if (timecont > 6) 
+		if (timecont > time+1) 
 		
 		{
 			timecont = 0;
