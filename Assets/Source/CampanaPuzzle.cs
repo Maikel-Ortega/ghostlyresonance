@@ -8,8 +8,10 @@ public class CampanaPuzzle : MonoBehaviour
 	public int[] combination = {3,3,1,4};
 	public int currentIndex = 0;
 	public GameObject door;
+    public GameObject triggerEntradaAtico;
 
-	void Awake()
+
+    void Awake()
 	{
 		foreach (var item in bells) 
 		{
@@ -38,7 +40,8 @@ public class CampanaPuzzle : MonoBehaviour
 	void OnCorrectCombination()
 	{
 		door.SetActive(false);
-	}
+        triggerEntradaAtico.SetActive(true);
+    }
 
 	void OnWrongCampana()
 	{
