@@ -9,7 +9,7 @@ public class FrequencyManager : MonoBehaviour
 	public WaveRenderer waveRenderer;
     public UnityEngine.UI.Slider _sldIndicador;
 
-	private float _frequency= 100;
+	private float _frequency= 80;
 	public float frequency 
 	{
 		get
