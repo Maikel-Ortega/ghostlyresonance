@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e3b31661615f642a28cd73a261f842, type: 3}
+  m_Name: Hag_Three_Spanish
+  m_EditorClassIdentifier: 
+  portrait: {fileID: 0}
+  texts:
+  - "\xA1Fue un error! Me pas\xE9 con la dosis, solo quer\xEDa dormirlo y fisgonear
+    un poco..."
+  - "Ese viejo cabezota... Sab\xEDa algo sobre el orden de las campanas que cuelgan
+    en el \xE1tico."
+  - "Me cont\xF3 algo sobre la campana alargada, la que parece un cencerro."
+  - "Y ahora... est\xE1 muerto..."
+  - Yo...
+  - '...Soy una asesina...'
