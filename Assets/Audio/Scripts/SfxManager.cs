@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SfxManager : MonoBehaviour {
 
-	public AudioSource [] footsteps;
+	public AudioSource [] footsteps,click;
 	AudioSource sound;
-	public AudioSource chimea,chimeb,chimec,chimed, door, cristal, wall;
+	public AudioSource chimea,chimeb,chimec,chimed, door, cristal, wall,clock,pulse,cuco;
 
 	void PlayAnySound(){
 	
@@ -88,6 +88,25 @@ public class SfxManager : MonoBehaviour {
 
 	}
 
+	public void PlayClock(){
+	
+		clock.Play ();
+
+	
+	}
+
+	public void PlayCuco(){
+	
+		cuco.Play ();
+	
+	}
+
+
+	public void PlayPulse(){
+	
+		pulse.Play ();
+	
+	}
 
 
 	public void PlayFootsteps(){
@@ -99,6 +118,22 @@ public class SfxManager : MonoBehaviour {
 		random = Random.Range (0, footsteps.Length);
 
 			footsteps [random].Play ();
+		}
+		else
+		{
+			Debug.Log ( "list is null");
+		}
+	}
+
+	public void PlayClick(){
+
+		int random;
+
+		if(click!=null){
+
+			random = Random.Range (0, click.Length);
+
+			click [random].Play ();
 		}
 		else
 		{
