@@ -4,8 +4,11 @@ using UnityEngine;
 
 public enum GHOSTS
 {
-	RECEPCIONISTA,
-	VIEJA
+	MANAGER,
+	PETUS,
+	HAG,
+	SPY,
+	HEIR
 }
 
 public enum HOURS
@@ -65,16 +68,11 @@ public class HotelManager : MonoBehaviour
 
 	void InstantiateGhost(GHOSTS type, Transform pivot, string dialogKey)
 	{
-		var inGameGhost = instantiatedGhosts.Find(x => x.type == type);
-		if(inGameGhost != null)
-		{
-			GameObject.Destroy(inGameGhost.prefab);
-			instantiatedGhosts.Remove(inGameGhost);
-		}
+		
 		var pr = ghostPrefabData.Find( x => x.type == type).prefab;
 		GameObject go = Instantiate(pr, pivot) as GameObject;
 
-		inGameGhost = new GhostPrefabsByType();
+		var inGameGhost = new GhostPrefabsByType();
 		inGameGhost.type = type;
 		inGameGhost.prefab = go;
 		instantiatedGhosts.Add(inGameGhost);
@@ -85,6 +83,12 @@ public class HotelManager : MonoBehaviour
 
 	public void SetGhostsConfigByHour(HOURS hour)
 	{
+		foreach (var item in instantiatedGhosts) 
+		{
+			GameObject.Destroy(item.prefab);	
+		}
+		instantiatedGhosts.Clear();
+
 		List<GhostsByPosition> ghostData =  ghostSettingsByHour.Find(x => x.hour == hour).ghostData;
 		foreach (var item in ghostData) 
 		{

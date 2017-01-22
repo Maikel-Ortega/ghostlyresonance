@@ -12,36 +12,36 @@ MonoBehaviour:
   m_Name: DialogDatabase
   m_EditorClassIdentifier: 
   englishDialogs:
-  - key: Petus_Three_English
+  - key: Petus_Three
     dialogScriptable: {fileID: 11400000, guid: cb8d22b8bf527f446aa0c02dfcf0761d, type: 2}
-  - key: Petus_Six_English
+  - key: Petus_Six
     dialogScriptable: {fileID: 11400000, guid: f743276e594dbc345b7a542b279f7305, type: 2}
-  - key: Petus_Nine_English
+  - key: Petus_Nine
     dialogScriptable: {fileID: 11400000, guid: bb362b7f39b129c4a83d8367968e248e, type: 2}
-  - key: Hag_Three_English
+  - key: Hag_Three
     dialogScriptable: {fileID: 11400000, guid: 413fe9a419f631b40a3d819c1c1dde4a, type: 2}
-  - key: Hag_Nine_English
+  - key: Hag_Nine
     dialogScriptable: {fileID: 11400000, guid: 65055835044be714d9847f2cdc9ca16b, type: 2}
-  - key: Spy_Nine_English
+  - key: Spy_Nine
     dialogScriptable: {fileID: 11400000, guid: 3e5207ad235baf64d91480e4112013a3, type: 2}
-  - key: Heir_Nine_English
+  - key: Heir_Nine
     dialogScriptable: {fileID: 11400000, guid: 29af53ca831fbaa45bd0342a80bc405c, type: 2}
-  - key: Manager_Twelve_English
+  - key: Manager_Twelve
     dialogScriptable: {fileID: 11400000, guid: 9954adc89394bfb4d8589e982d91f255, type: 2}
   spanishDialogs:
-  - key: Petus_Three_Spanish
+  - key: Petus_Three
     dialogScriptable: {fileID: 11400000, guid: cb8d22b8bf527f446aa0c02dfcf0761d, type: 2}
-  - key: Petus_Six_Spanish
+  - key: Petus_Six
     dialogScriptable: {fileID: 11400000, guid: c69c266a34bcdf145b4e5a2f9d4614ba, type: 2}
-  - key: Petus_Nine_Spanish
+  - key: Petus_Nine
     dialogScriptable: {fileID: 11400000, guid: 8b7f00a5cf6344f4ea2bbdfd983b52b7, type: 2}
-  - key: Hag_Three_Spanish
+  - key: Hag_Three
     dialogScriptable: {fileID: 11400000, guid: 3a9a67361d608554ba22e272ba146aaa, type: 2}
-  - key: Hag_Nine_Spanish
+  - key: Hag_Nine
     dialogScriptable: {fileID: 11400000, guid: 6fd05397edd19cd478fc202bd76bdb9b, type: 2}
-  - key: Spy_Nine_Spanish
+  - key: Spy_Nine
     dialogScriptable: {fileID: 11400000, guid: e2293686ffa63ed419285aad82729afd, type: 2}
-  - key: Heir_Nine_Spanish
+  - key: Heir_Nine
     dialogScriptable: {fileID: 11400000, guid: 9214c0cc269f21d4fb9bad063bb1b8ad, type: 2}
-  - key: Manager_Twelve_Spanish
+  - key: Manager_Twelve
     dialogScriptable: {fileID: 11400000, guid: d2d24b47360ca8148801516e721f998e, type: 2}
