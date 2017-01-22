@@ -29,7 +29,11 @@ public class DoorInteractuable : InteractuableItem
 
     private void OnDestroy()
     {
-        CameraBehaviour.Instance.OnFocusFinished -= HandleOnTranslateFinihed;
+        if (CameraBehaviour.InstanceExists)
+        {
+            CameraBehaviour.Instance.OnFocusFinished -= HandleOnTranslateFinihed;
+        }
+    
     }
 
 
