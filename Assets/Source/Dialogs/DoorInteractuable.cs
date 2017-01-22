@@ -46,6 +46,7 @@ public class DoorInteractuable : InteractuableItem
     public void InteractionFinished()
     {
         playerLogic.interacting = false;
+        playerLogic.interactuableOnArea = null;
         canInteract = false;
         interacting = false;
         started = false;
