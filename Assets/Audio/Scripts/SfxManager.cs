@@ -6,7 +6,7 @@ public class SfxManager : MonoBehaviour {
 
 	public AudioSource [] footsteps,click;
 	AudioSource sound;
-	public AudioSource chimea,chimeb,chimec,chimed, door, cristal, wall,clock,pulse,cuco;
+	public AudioSource chimea,chimeb,chimec,chimed, door, cristal, wall,clock,pulse,cuco,wrong;
 
 	void PlayAnySound(){
 	
@@ -87,6 +87,13 @@ public class SfxManager : MonoBehaviour {
 
 
 	}
+
+	public void PlayWrong(){
+	
+		wrong.Play ();
+	
+	}
+
 
 	public void PlayClock(){
 	
