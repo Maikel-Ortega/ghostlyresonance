@@ -41,11 +41,12 @@ public class CampanaPuzzle : MonoBehaviour
 	{
 		door.SetActive(false);
         triggerEntradaAtico.SetActive(true);
+		FindObjectOfType<SfxManager>().PlayDoor();
     }
 
 	void OnWrongCampana()
 	{
 		currentIndex = 0;
-		//FindObjectOfType<SfxManager>().PlayWrong;
+		FindObjectOfType<SfxManager>().PlayWrong();
 	}
 }
