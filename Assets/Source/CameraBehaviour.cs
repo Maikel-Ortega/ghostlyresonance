@@ -16,7 +16,9 @@ public class CameraBehaviour : UnitySingleton<CameraBehaviour>
 
     Transform objectFocused;
     public bool followingPlayer = true;
-    private float yAxis = 0f;
+    private float yAxis = -10.5f;
+
+    public SpriteRenderer rendererPlayer;
 
 
     void LateUpdate()
@@ -31,6 +33,7 @@ public class CameraBehaviour : UnitySingleton<CameraBehaviour>
 
     public void FocusOnTransform(Transform _objectFocused, float _yAxis)
     {
+        rendererPlayer.DOFade(0f, 1f);
         this.objectFocused = _objectFocused;
         yAxis = _yAxis;
         Vector3 v3NewCameraPosition = new Vector3(_objectFocused.position.x, yAxis, Camera.main.transform.position.z);
@@ -40,8 +43,12 @@ public class CameraBehaviour : UnitySingleton<CameraBehaviour>
         {
             playerTransform.position = new Vector3(_objectFocused.position.x, yAxis, playerTransform.transform.position.z);
             followingPlayer = true;
-            
-            OnFocusFinished(_objectFocused);
+            if (OnFocusFinished != null)
+            {
+                rendererPlayer.DOFade(1f, 1f);
+                OnFocusFinished(_objectFocused);
+            }
+
 
         });
 
