@@ -22,6 +22,12 @@ MonoBehaviour:
     dialogScriptable: {fileID: 11400000, guid: 413fe9a419f631b40a3d819c1c1dde4a, type: 2}
   - key: Hag_Nine_English
     dialogScriptable: {fileID: 11400000, guid: 65055835044be714d9847f2cdc9ca16b, type: 2}
+  - key: Spy_Nine_English
+    dialogScriptable: {fileID: 11400000, guid: 3e5207ad235baf64d91480e4112013a3, type: 2}
+  - key: Heir_Nine_English
+    dialogScriptable: {fileID: 11400000, guid: 29af53ca831fbaa45bd0342a80bc405c, type: 2}
+  - key: Manager_Twelve_English
+    dialogScriptable: {fileID: 11400000, guid: 9954adc89394bfb4d8589e982d91f255, type: 2}
   spanishDialogs:
   - key: Petus_Three_Spanish
     dialogScriptable: {fileID: 11400000, guid: cb8d22b8bf527f446aa0c02dfcf0761d, type: 2}
@@ -33,3 +39,9 @@ MonoBehaviour:
     dialogScriptable: {fileID: 11400000, guid: 3a9a67361d608554ba22e272ba146aaa, type: 2}
   - key: Hag_Nine_Spanish
     dialogScriptable: {fileID: 11400000, guid: 6fd05397edd19cd478fc202bd76bdb9b, type: 2}
+  - key: Spy_Nine_Spanish
+    dialogScriptable: {fileID: 11400000, guid: e2293686ffa63ed419285aad82729afd, type: 2}
+  - key: Heir_Nine_Spanish
+    dialogScriptable: {fileID: 11400000, guid: 9214c0cc269f21d4fb9bad063bb1b8ad, type: 2}
+  - key: Manager_Twelve_Spanish
+    dialogScriptable: {fileID: 11400000, guid: d2d24b47360ca8148801516e721f998e, type: 2}

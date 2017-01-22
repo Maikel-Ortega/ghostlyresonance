@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e3b31661615f642a28cd73a261f842, type: 3}
+  m_Name: Heir_Nine_Spanish
+  m_EditorClassIdentifier: 
+  portrait: {fileID: 0}
+  texts:
+  - "A\xFAn recuerdo el fr\xEDo... Ese mortal mordisco en mi piel..."
+  - "Antes de morir dej\xE9 de sentir nada, no pod\xEDa siquiera pensar."
+  - "Ese gerente... Cre\xEDa que era un buen amigo. Pero me encerr\xF3 aqu\xED fuera
+    esa noche, a merced de los elementos."
+  - "Quer\xEDa que le dijera lo que sab\xEDa sobre las campanas. Quiz\xE1s se enfad\xF3
+    porque no le dije lo que mi abuelo contaba en su testamento..."
+  - 'Que la segunda campana es la misma que la primera. '
