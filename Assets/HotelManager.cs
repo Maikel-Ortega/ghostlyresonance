@@ -40,11 +40,15 @@ public class GhostPrefabsByType
 
 public class HotelManager : MonoBehaviour 
 {
+	public HOURS testHour;
+
+	[Header("ConfigData")]
 	public List<GhostSettingsByHour> ghostSettingsByHour;
 	public List<GhostPrefabsByType> ghostPrefabData;
+
+	[Header("InGame")]
 	public List<GhostPrefabsByType> instantiatedGhosts;
 
-	public HOURS testHour;
 
 	void Awake()
 	{
@@ -69,6 +73,12 @@ public class HotelManager : MonoBehaviour
 		}
 		var pr = ghostPrefabData.Find( x => x.type == type).prefab;
 		GameObject go = Instantiate(pr, pivot) as GameObject;
+
+		inGameGhost = new GhostPrefabsByType();
+		inGameGhost.type = type;
+		inGameGhost.prefab = go;
+		instantiatedGhosts.Add(inGameGhost);
+
 		go.transform.localPosition = Vector3.zero;
 		go.GetComponent<DialogInteractuable>().dialogKey = dialogKey;
 	}
