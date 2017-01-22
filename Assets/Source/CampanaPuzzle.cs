@@ -38,11 +38,12 @@ public class CampanaPuzzle : MonoBehaviour
 	void OnCorrectCombination()
 	{
 		door.SetActive(false);
+		FindObjectOfType<SfxManager>().PlayDoor();
 	}
 
 	void OnWrongCampana()
 	{
 		currentIndex = 0;
-		//FindObjectOfType<SfxManager>().PlayWrong;
+		FindObjectOfType<SfxManager>().PlayWrong();
 	}
 }
