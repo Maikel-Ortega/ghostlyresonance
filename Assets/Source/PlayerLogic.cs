@@ -164,6 +164,7 @@ public class PlayerLogic : MonoBehaviour
 	{
 		if(Input.GetButtonDown(mInputButtonPulse) && pulseCD == 0)
 		{
+			GameObject.FindObjectOfType<SfxManager>().PlayPulse();
 			pulseGenerator.SendPulse(pMaxRadius, pCurve, pMaxSeconds, freqManager.frequency);
 		}
 	}

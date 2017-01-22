@@ -5,10 +5,7 @@ using UnityEngine;
 public class CampanaReciever : PulseReceiver
 {
     public int campanaId = 0;
-    public Collider2D campanaCollider;
-    public Transform campanaGraphicPivot;
-    public Collider2D mCollider;
-    public Transform mGraphicPivot;
+	public Animator amt;
 
     SfxManager sfxManager;
 
@@ -19,6 +16,7 @@ public class CampanaReciever : PulseReceiver
     protected override void Reaction()
     {
         base.Reaction();
+		amt.SetTrigger("chime");
 
     //    this.enabled = false;
    //     mGraphicPivot.gameObject.SetActive(false);

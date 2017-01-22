@@ -5,6 +5,7 @@ using UnityEngine;
 public class ClockPulseReceiver : PulseReceiver 
 {
 	public HOURS currentHour;
+	public Animator clockAnimator;
 
 	protected override void Reaction ()
 	{
@@ -26,6 +27,9 @@ public class ClockPulseReceiver : PulseReceiver
 			break;
 		}
 
+		clockAnimator.SetTrigger("next");
+
+		GameObject.FindObjectOfType<SfxManager>().PlayCuco();
 		GameObject.FindObjectOfType<HotelManager>().SetGhostsConfigByHour(currentHour);
 
 	}
