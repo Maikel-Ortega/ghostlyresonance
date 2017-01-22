@@ -373,7 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15521eb2bd241c45aea11b7fd5e5efb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetFrequency: 120
+  targetFrequency: 50
   freqAcceptableOffset: 5
   vibrate: 1
   vibrationTransform: {fileID: 4496480162492494}
