@@ -2075,7 +2075,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c4ceb1a3bb5eeb49bd9a807267cf729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footsteps: []
+  footsteps:
+  - {fileID: 82963299486457476}
+  - {fileID: 82275285111062450}
+  - {fileID: 82601621844252906}
+  - {fileID: 82199253761668416}
   chimea: {fileID: 82732870304520222}
   chimeb: {fileID: 82182278617265246}
   chimec: {fileID: 82093553736160938}
