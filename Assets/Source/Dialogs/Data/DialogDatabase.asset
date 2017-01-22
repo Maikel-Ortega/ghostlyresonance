@@ -22,6 +22,10 @@ MonoBehaviour:
     dialogScriptable: {fileID: 11400000, guid: e9c4e47655e592c4d924f3333dde86a0, type: 2}
   - key: TEST_VIEJA_TWELVE
     dialogScriptable: {fileID: 11400000, guid: f7138f11292d82748a2256a60dc4558a, type: 2}
+  - key: Petus_Three_English
+    dialogScriptable: {fileID: 11400000, guid: cb8d22b8bf527f446aa0c02dfcf0761d, type: 2}
+  - key: Petus_Six_English
+    dialogScriptable: {fileID: 11400000, guid: f743276e594dbc345b7a542b279f7305, type: 2}
   spanishDialogs:
   - key: TEST
     dialogScriptable: {fileID: 11400000, guid: 68e1569d5bf014c46ad84a86ae3452e1, type: 2}
@@ -33,3 +37,7 @@ MonoBehaviour:
     dialogScriptable: {fileID: 11400000, guid: e9c4e47655e592c4d924f3333dde86a0, type: 2}
   - key: TEST_VIEJA_TWELVE
     dialogScriptable: {fileID: 11400000, guid: f7138f11292d82748a2256a60dc4558a, type: 2}
+  - key: Petus_Three_Spanish
+    dialogScriptable: {fileID: 11400000, guid: cb8d22b8bf527f446aa0c02dfcf0761d, type: 2}
+  - key: Petus_Six_Spanish
+    dialogScriptable: {fileID: 11400000, guid: c69c266a34bcdf145b4e5a2f9d4614ba, type: 2}
