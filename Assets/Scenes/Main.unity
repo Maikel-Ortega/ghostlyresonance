@@ -484,6 +484,10 @@ Prefab:
       propertyPath: fade
       value: 
       objectReference: {fileID: 1879402885}
+    - target: {fileID: 1680369860444572, guid: 618dd57e6a941d442936d8f56e8f2af9, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 618dd57e6a941d442936d8f56e8f2af9, type: 2}
   m_IsPrefabParent: 0
@@ -800,6 +804,10 @@ Prefab:
       propertyPath: m_Name
       value: SamplePulseReceiver
       objectReference: {fileID: 0}
+    - target: {fileID: 1865342831748308, guid: ea13045ce0978744888df0c49818dd24, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea13045ce0978744888df0c49818dd24, type: 2}
   m_IsPrefabParent: 0
@@ -862,6 +870,11 @@ Prefab:
     - target: {fileID: 4500329480924592, guid: 0cb0a371e90b19a4a8b569e63f1a6349, type: 2}
       propertyPath: m_RootOrder
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114161915492639148, guid: 0cb0a371e90b19a4a8b569e63f1a6349,
+        type: 2}
+      propertyPath: currentHour
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cb0a371e90b19a4a8b569e63f1a6349, type: 2}
